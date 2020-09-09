@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Portfolia</string>
+
+    <string name="name">Username</string>
+    <string name="surname">Surname</string>
+    <string name="nation">Nationality</string>
+</resources>
