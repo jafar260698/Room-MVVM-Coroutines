@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.portfolia.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dossierFragment"
+        android:name="com.example.portfolia.ui.DossierFragment"
+        android:label="fragment_dossier"
+        tools:layout="@layout/fragment_dossier" >
+        <action
+            android:id="@+id/action_dossierFragment_to_writingFragment"
+            app:destination="@id/writingFragment" />
+        <action
+            android:id="@+id/action_dossierFragment_to_myCertificatesFragment"
+            app:destination="@id/myCertificatesFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_dossierFragment_to_spaekingFragment"
+            app:destination="@id/spaekingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.portfolia.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.portfolia.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_dossierFragment"
+            app:destination="@id/dossierFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/writingFragment"
+        android:name="com.example.portfolia.ui.dossier.WritingFragment"
+        android:label="fragment_writing"
+        tools:layout="@layout/fragment_writing" />
+    <fragment
+        android:id="@+id/spaekingFragment"
+        android:name="com.example.portfolia.ui.dossier.SpaekingFragment"
+        android:label="fragment_spaeking"
+        tools:layout="@layout/fragment_spaeking" />
+    <fragment
+        android:id="@+id/myCertificatesFragment"
+        android:name="com.example.portfolia.ui.dossier.MyCertificatesFragment"
+        android:label="fragment_my_certificates"
+        tools:layout="@layout/fragment_my_certificates" >
+        <action
+            android:id="@+id/action_myCertificatesFragment_to_certificateAddFragment"
+            app:destination="@id/certificateAddFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/certificateAddFragment"
+        android:name="com.example.portfolia.ui.dossier.CertificateAddFragment"
+        android:label="fragment_certificate_add"
+        tools:layout="@layout/fragment_certificate_add" />
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.example.portfolia.ui.dialogfragment.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+</navigation>

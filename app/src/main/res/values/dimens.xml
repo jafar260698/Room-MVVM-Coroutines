@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_standart">18sp</dimen>
+    <dimen name="ten">10dp</dimen>
+    <dimen name="thirty">30dp</dimen>
+    <dimen name="twenty">20dp</dimen>
+    <dimen name="twentysp">20sp</dimen>
+    <dimen name="fiveteen">15dp</dimen>
+    <dimen name="sixteen">16dp</dimen>
+    <dimen name="five">5dp</dimen>
+    <dimen name="sixteensp">16sp</dimen>
+    <dimen name="eighteensp">18sp</dimen>
+    <dimen name="twelve">12dp</dimen>
+    <dimen name="twentyfour">24sp</dimen>
+    <dimen name="eighteen">18dp</dimen>
+</resources>
