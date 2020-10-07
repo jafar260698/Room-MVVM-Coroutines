@@ -7,4 +7,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="restaurant_file">RESTAURANT_FILE</string>
+    <string name="my_language_passport">My language passport</string>
+    <string name="my_account">My Account</string>
+    <string name="reason_for_learning">Why do you want to learn this language?</string>
+    <string name="exact_thing">Exact things I want to learn in this language</string>
+    <string name="cef_level">Which level do I want to reach according to CEF levels</string>
+    <string name="purpose_language">My purpose of learning language</string>
+    <string name="choose_the_language">Choose the language</string>
+    <string name="file_saved">File Saved</string>
+    <string name="file_must_be_uploaded">File must be uploaded</string>
+    <string name="file_must_not_be_loaded">Field must not be empty</string>
+    <string name="language">Language:</string>
+    <string name="save">Save</string>
+    <string name="ochirildi">O\'chirildi</string>
+    <string name="self_assessment">Self-Assessment</string>
+    <string name="language_exact">Language</string>
 </resources>

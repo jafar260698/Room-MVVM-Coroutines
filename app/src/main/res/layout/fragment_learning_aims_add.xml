@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.languageBiography.LearningAimsAddFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/five"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_writing"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_marginBottom="@dimen/fiveteen"
+        android:padding="@dimen/five">
+        <ImageView
+            android:id="@+id/back_profile"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_arrow"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/five"
+            android:focusable="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add aims"
+            android:textSize="@dimen/twentysp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear_moder"
+        android:layout_below="@+id/asosiy_faoliyat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:text="@string/choose_the_language"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinner_aims"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="3dp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/reason_for_learning"
+        android:padding="@dimen/five">
+        <com.google.android.material.textfield.TextInputEditText
+            android:gravity="top|start"
+            android:id="@+id/reason_of_learning"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/exact_thing"
+        android:padding="@dimen/five">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/exact_thing"
+            android:gravity="top|start"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cef_level"
+        android:padding="@dimen/five">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cef_level"
+            android:gravity="top|left"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textMultiLine"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/purpose_language"
+        android:padding="@dimen/five">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/purpose_language"
+            android:layout_width="match_parent"
+            android:gravity="top|left"
+            android:layout_height="100dp"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/save_aims"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:padding="@dimen/ten"
+        android:text="OK"
+        android:layout_marginTop="@dimen/fiveteen"
+        android:background="@drawable/button_design3"
+        android:layout_marginStart="@dimen/twenty"
+        android:layout_marginEnd="@dimen/twenty"
+        android:layout_marginBottom="@dimen/twenty"
+        android:textSize="@dimen/twentysp"/>
+    </LinearLayout>
+</ScrollView>

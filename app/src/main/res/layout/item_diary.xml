@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/fiveteen"
+    app:cardCornerRadius="@dimen/ten"
+    android:background="@color/lightwhite"
+    android:layout_margin="@dimen/ten">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ten"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="Questions"
+            android:fontFamily="@font/roboto"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/twentysp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="@dimen/ten"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/amount_of_time"
+            android:text="1). How many hours did I spend on self-study this week? "
+            android:fontFamily="sans-serif"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_below="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/aspect_of_studying"
+            android:text="2). What aspects of language or skills did I work on most?"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/org_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/when_product"
+            android:text="3). When did I work productively?"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/where_product"
+            android:text="4). Where did I work most productively? "
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/method_of_study"
+            android:text="5). What methods or ways did I use during the self-study?"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/outcome_myresult"
+            android:text="6). What was the outcome of my self-study? "
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

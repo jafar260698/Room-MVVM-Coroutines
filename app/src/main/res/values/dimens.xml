@@ -8,6 +8,7 @@
     <dimen name="fiveteen">15dp</dimen>
     <dimen name="sixteen">16dp</dimen>
     <dimen name="five">5dp</dimen>
+    <dimen name="three">3dp</dimen>
     <dimen name="sixteensp">16sp</dimen>
     <dimen name="eighteensp">18sp</dimen>
     <dimen name="twelve">12dp</dimen>

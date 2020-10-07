@@ -25,7 +25,7 @@
                 android:id="@+id/picture"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/logo" />
+                android:src="@drawable/profil" />
             </androidx.cardview.widget.CardView>
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fabChoosePic"
@@ -33,12 +33,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="5dp"
                 app:srcCompat="@drawable/ic_picture"
                 app:elevation="@dimen/five"
-                app:borderWidth="1dp"
                 android:tint="@color/white"
+                app:borderWidth="0dp"
                 android:backgroundTint="@color/white"
                 app:fabSize="mini"/>
         </RelativeLayout>
@@ -57,7 +57,7 @@
                 android:orientation="vertical"
                 android:layout_margin="16dp">
                 <TextView
-                    android:text="Overview"
+                    android:text="Registration page"
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="10dp"
                     android:textSize="20sp"
@@ -67,16 +67,18 @@
                     android:layout_height="wrap_content" />
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/five"
-                    android:hint="Name">
+                    android:hint="Name"
+                    android:padding="@dimen/five">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/name"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <LinearLayout
@@ -92,14 +94,17 @@
                         android:layout_height="26dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_marginStart="10dp"
                         android:layout_width="match_parent"
                         android:padding="@dimen/five"
-                        android:hint="Date of Birth"
                         android:layout_height="wrap_content">
-                        <com.google.android.material.textfield.TextInputEditText
+                        <EditText
                             android:id="@+id/date_of_birth"
                             android:inputType="date"
+                            android:hint="Date of Birth"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:fontFamily="sans-serif-light"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
@@ -108,6 +113,7 @@
                 </LinearLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/five"
@@ -121,6 +127,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:padding="@dimen/five"
                     android:hint="Nationality"
                     android:layout_width="match_parent"
@@ -134,8 +141,9 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:padding="@dimen/five"
-                    android:hint="My mother language"
+                    android:hint="My native language"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
@@ -146,18 +154,6 @@
                         android:layout_height="wrap_content" />
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Field od study"
-                    android:padding="@dimen/five">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/field_of_study"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -171,32 +167,22 @@
                         android:layout_height="26dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_marginStart="10dp"
-                        android:hint="Data of Starting Using ELP"
                         android:padding="@dimen/five"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                        <com.google.android.material.textfield.TextInputEditText
+                        <EditText
                             android:id="@+id/date_started"
+                            android:hint="Data of Starting Using ELP"
                             android:inputType="date"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
                             android:fontFamily="sans-serif-light"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/five"
-                    android:hint="Parol">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/parol"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -206,6 +192,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
+            android:background="@drawable/button_design3"
             android:padding="@dimen/ten"
             android:text="OK"
             android:layout_marginStart="@dimen/twenty"

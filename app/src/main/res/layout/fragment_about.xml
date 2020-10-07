@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.dialogfragment.AboutFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relative_map_top_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/lightwhite"
+            android:elevation="@dimen/five">
+            <ImageButton
+                android:id="@+id/about_back"
+                android:visibility="visible"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:layout_alignParentStart="true"
+                />
+            <TextView
+                android:id="@+id/manzil_saqlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/twentysp"
+                android:text="About app"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/blue"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/about_app_title"
+            android:text="aoup"
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="@dimen/fiveteen"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
 
-</FrameLayout>
+            android:text="Uzbek Model of European Language Portfolio (UzELP)
+for Pre-Service English Teacher Training Programme Students
+Electronic Version 1.0.0"
+
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/fiveteen"
+            android:layout_marginEnd="@dimen/fiveteen"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text=" The European Language Portfolio (ELP) is a document in which you can record and
+reflect on your language learning and intercultural experiences, whether gained at school or outside school.  It contains three parts:
+a Language Passport, which provides an overview of your proficiency in different languages at a given point in time;
+a Language Biography, which helps you plan, reflect upon and assess your learning process and progress;
+a Dossier, which offers you an opportunity to select materials to document and illustrate the achievements or experiences you have recorded in your Language Biography or Passport.
+The ELP is your property as a learner.  Its main aims are:
+to help you give shape and coherence to your experience of learning and using languages other than your first language;
+to motivate you by acknowledging your efforts to extend and diversify your language skills at all levels;
+to provide a record of the linguistic and cultural skills you have acquired (to be consulted, for example, when you are moving to a higher learning level or seeking employment at home or abroad).
+The ELP is linked to the Common European Framework of Reference for Languages and conforms to a common set of Principles and Guidelines that have been approved by the Council of Europe’s Committee of Ministers to Member States concerning Modern Languages (Recommendation N° R (98) 6).
+The given electronic version of portfolio (e-portfolio) has been developed on the basis of Uzbek Model of European Language Portfolio (Copyright certificate #001657).
+Author: Khikmatullo Urazbaev, Westminster International University in Tashkent (WIUT)
+"
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="@dimen/fiveteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

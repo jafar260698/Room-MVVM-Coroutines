@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+    <RelativeLayout
+        android:padding="6dp"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_pdf"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/ic_pdf"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/item_type_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Type of work"
+            android:layout_toEndOf="@+id/item_pdf"
+            android:fontFamily="@font/roboto"
+            android:layout_gravity="center"
+            android:layout_marginEnd="100dp"
+            android:layout_marginStart="@dimen/ten"
+            android:textColor="@color/blue"/>
+        <TextView
+            android:id="@+id/item_level"
+            android:text="Level"
+            android:layout_toEndOf="@+id/item_pdf"
+            android:layout_below="@+id/item_type_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/five"
+            android:fontFamily="@font/artifika"
+            android:layout_marginStart="@dimen/ten"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/item_date_obtained"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/five"
+            android:layout_marginStart="4dp"
+            android:text="Date of obtained"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="60dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

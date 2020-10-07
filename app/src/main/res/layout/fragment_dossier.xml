@@ -15,7 +15,7 @@
         android:layout_marginBottom="@dimen/fiveteen"
         android:padding="@dimen/five">
         <ImageView
-            android:id="@+id/back_change"
+            android:id="@+id/back_dossier"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_arrow"
@@ -65,6 +65,7 @@
         </TextView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/linear_writing"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="@dimen/fiveteen"
@@ -93,6 +94,7 @@
         </TextView>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/linear_speaking"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="@dimen/fiveteen"

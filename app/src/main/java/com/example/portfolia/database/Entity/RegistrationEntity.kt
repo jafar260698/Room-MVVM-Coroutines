@@ -10,9 +10,7 @@ data class RegistrationEntity(
     var place_of_birth:String,
     var nationality:String,
     var mother_tongue:String,
-    var field_of_study:String,
     var date_using:String,
-    var parol:String,
     var image_uri:String
 ) {
     @PrimaryKey(autoGenerate = true)

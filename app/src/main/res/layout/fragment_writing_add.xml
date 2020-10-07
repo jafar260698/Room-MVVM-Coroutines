@@ -1,14 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".ui.dossier.WritingAddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
+        android:id="@+id/relative_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="58dp"
+        android:elevation="0dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_marginBottom="@dimen/fiveteen"
+        android:padding="@dimen/five">
+        <ImageView
+            android:id="@+id/cert_add_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_arrow"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/five"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/logo_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Writing"
+            android:textSize="@dimen/twentysp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"/>
+    </RelativeLayout>
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_marginEnd="@dimen/ten"
+        android:padding="@dimen/ten"
+        android:hint="Type of Document">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/type_of_document_writing"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_marginEnd="@dimen/ten"
+        android:padding="@dimen/ten"
+        android:hint="Level">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/level_writing"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ten"
+        android:layout_marginEnd="@dimen/ten"
+        android:padding="@dimen/ten"
+        android:hint="Date of obtained">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/date_of_obtained_writing"
+            android:fontFamily="sans-serif-light"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/upload_file_writing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:layout_marginStart="@dimen/fiveteen"
+        android:layout_marginEnd="@dimen/fiveteen"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:textAllCaps="false"
+        android:padding="@dimen/ten"
+        app:strokeColor="@color/blue"
+        android:text="Upload file"
+        android:textSize="@dimen/twentysp"/>
+
+    <Button
+        android:id="@+id/save_writing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:background="@drawable/button_design3"
+        android:padding="@dimen/ten"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginStart="@dimen/fiveteen"
+        android:layout_marginEnd="@dimen/fiveteen"
+        android:text="OK"
+        android:textSize="@dimen/twentysp"/>
+
+
+</LinearLayout>

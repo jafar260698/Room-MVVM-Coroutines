@@ -1,24 +1,30 @@
 package com.example.portfolia.ui.dialogfragment
 
+import android.content.Intent
 import android.graphics.*
 import android.graphics.pdf.PdfDocument
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import com.example.portfolia.R
+import com.example.portfolia.util.FileUtil
+import com.github.barteksc.pdfviewer.PDFView
 import java.io.File
 import java.io.FileOutputStream
 import java.lang.Exception
 
 
 class PdfPortfoliaFragment : DialogFragment() {
-    val informationarray= arrayOf("Name","Company Name","Address","Phone","Email")
     var bmp:Bitmap?=null
     var scaled:Bitmap?=null
+    val TAG="PdfPortfoliaFragment"
+    var pdfView:PDFView?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,11 +33,21 @@ class PdfPortfoliaFragment : DialogFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        savedInstanceState: Bundle?): View? {
         val view:View= inflater.inflate(R.layout.fragment_pdf_portfolia, container, false)
+        pdfView=view.findViewById(R.id.pdfview_portfolia)
+
         bmp=BitmapFactory.decodeResource(resources,R.drawable.face)
         scaled=Bitmap.createScaledBitmap(bmp!!,50,50,false)
+
+        view.findViewById<View>(R.id.share_pdf).setOnClickListener {
+            val shareIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_STREAM, Uri.parse("file:///storage/emulated/0/Porfolia/1600935812634.jpg"))
+                type = "image/*"
+            }
+            startActivity(Intent.createChooser(shareIntent, resources.getText(R.string.app_name)))
+        }
 
         view.findViewById<View>(R.id.btn_pdf_save).setOnClickListener {
             createPdf()
@@ -39,6 +55,7 @@ class PdfPortfoliaFragment : DialogFragment() {
 
         return view
     }
+
     private fun createPdf(){
         val pdfDocument= PdfDocument()
         val paint: Paint = Paint()
@@ -99,11 +116,29 @@ class PdfPortfoliaFragment : DialogFragment() {
         val file = File(Environment.getExternalStorageDirectory(), "/Resume2.pdf")
         try {
             pdfDocument.writeTo(FileOutputStream(file))
+            val files:Uri=Uri.fromFile(file)
+            showPdfFromUri(files)
         }catch (e: Exception){
             e.printStackTrace()
         }
         pdfDocument.close()
     }
+
+    private fun showPdfFromUri(uri: Uri?) {
+        Log.d(TAG, uri.toString())
+        pdfView!!.fromUri(uri)
+            .defaultPage(0)
+            .spacing(10)
+            .load()
+
+        val file:File=FileUtil.from(requireActivity(),uri)
+        Log.d(TAG,uri.toString())
+        Log.d(TAG,file.path)
+        Log.d(TAG,file.absolutePath)
+        Log.d(TAG,file.toString())
+
+    }
+
 
     override fun onActivityCreated(arg0: Bundle?) {
         super.onActivityCreated(arg0)

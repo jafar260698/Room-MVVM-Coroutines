@@ -1,15 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".ui.dialogfragment.PdfPortfoliaFragment">
 
-    <Button
-        android:id="@+id/btn_pdf_save"
+    <RelativeLayout
+        android:id="@+id/relative_pdf_profile"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Button" />
+        android:layout_height="58dp"
+        android:layout_marginBottom="@dimen/five"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/lightwhite"
+        android:elevation="@dimen/five">
+        <ImageButton
+            android:id="@+id/myown_exit"
+            android:visibility="visible"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:layout_alignParentStart="true"
+            />
+        <TextView
+            android:id="@+id/manzil_saqlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Generate pdf file"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/blue"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightwhite"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_pdf_save"
+            app:layout_constraintTop_toBottomOf="@+id/relative_pdf_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:layout_weight="1"
+            android:padding="@dimen/fiveteen"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:drawableLeft="@drawable/ic_generate"
+            android:text="Generate" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/share_pdf"
+            app:layout_constraintTop_toBottomOf="@+id/relative_pdf_profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:drawableLeft="@drawable/ic_baseline_share_24"
+            android:padding="@dimen/fiveteen"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:text="Share pdf" />
+    </LinearLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfview_portfolia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

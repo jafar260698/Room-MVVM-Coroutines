@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.dossier.AudioListFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/relative_audio"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:elevation="5dp"
+            android:visibility="gone"
+            android:background="?android:attr/windowBackground"
+            android:padding="@dimen/five">
+            <ImageView
+                android:id="@+id/clear_audio"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_marginStart="@dimen/five"
+                android:focusable="true"/>
+            <ImageView
+                android:id="@+id/delete_audio"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_delete"
+                android:layout_marginEnd="@dimen/ten"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_marginStart="@dimen/five"
+                android:focusable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Delete file"
+                android:textSize="@dimen/twentysp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/audio_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <include layout="@layout/player_sheet" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -20,6 +20,18 @@ class DossierFragment : Fragment() {
             this.findNavController().navigate(R.id.action_dossierFragment_to_myCertificatesFragment)
         }
 
+        view.findViewById<View>(R.id.linear_writing).setOnClickListener {
+           this.findNavController().navigate(R.id.action_dossierFragment_to_writingFragment)
+        }
+        view.findViewById<View>(R.id.linear_speaking).setOnClickListener {
+            this.findNavController().navigate(R.id.action_dossierFragment_to_speakingFragment)
+        }
+        view.findViewById<View>(R.id.back_dossier).setOnClickListener {
+            this.findNavController().popBackStack()
+        }
+
+
+
         return view
     }
 

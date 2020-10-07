@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.cardview.widget.CardView
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:id="@+id/card_item"
+    >
+  <RelativeLayout
+      android:id="@+id/relativeLayout_main"
+      android:padding="10dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      >
+    <TextView
+        android:id="@+id/org_name"
+        android:text="Organization name "
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/view"
+        android:layout_below="@id/org_name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="5dp"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/org_address"
+        android:text="Adress"
+        android:fontFamily="sans-serif"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sixteensp"
+        android:layout_marginBottom="@dimen/sixteen"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/org_director"
+        android:text="Raxbari"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sixteensp"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif"
+        android:layout_below="@+id/org_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/org_number"
+        android:text="Organization number"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sixteensp"
+        android:layout_marginBottom="@dimen/ten"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/ten"
+        android:textStyle="normal"
+        android:layout_below="@+id/org_director"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/org_email"
+        android:fontFamily="sans-serif"
+        android:text="Organization Email"
+        android:textColorHint="@color/cardview_shadow_end_color"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sixteensp"
+        android:layout_margin="@dimen/ten"
+        android:textStyle="normal"
+        android:layout_below="@+id/org_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_below="@+id/org_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/sixteen"
+        android:layout_marginBottom="@dimen/sixteen"
+        >
+
+    </LinearLayout>
+
+  </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</FrameLayout>

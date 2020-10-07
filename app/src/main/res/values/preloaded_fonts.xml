@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/artifika</item>
+        <item>@font/autour_one</item>
         <item>@font/bangers</item>
         <item>@font/bungee</item>
         <item>@font/roboto</item>

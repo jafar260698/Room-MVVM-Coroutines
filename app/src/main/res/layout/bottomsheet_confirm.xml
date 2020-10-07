@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="25dp"
+        android:src="@drawable/ic_school"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tasdiqlash"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twenty"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text=" Malumotlarni to'liq va tog'ri kiritishiz kerak, aks holda buyurtmangiz qabul qilinmaydi.!!!"
+        android:textSize="@dimen/textsize_standart"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/btn_dismisso"
+            android:layout_marginBottom="@dimen/textsize_standart"
+            android:background="@drawable/card_bg_buttons"
+            android:text="Bekor qilish"
+            android:textColor="@color/blue"
+            android:textStyle="bold"/>
+        <Button
+            android:id="@+id/btn_closeo"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="@dimen/textsize_standart"
+            android:background="@drawable/card_bg_buttons"
+            android:text="QABUL QILISH"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

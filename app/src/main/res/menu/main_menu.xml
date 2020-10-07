@@ -4,29 +4,32 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:icon="@drawable/ic_baseline_home_24"
+            android:id="@+id/home"
+            android:title="Home"
+           />
+        <item
             android:visible="true"
             android:icon="@drawable/ic_baseline_person_24"
             android:id="@+id/my_profile"
             android:title="My profile"/>
 
-        <item
-            android:icon="@drawable/ic_baseline_settings_24"
-            android:id="@+id/settings"
-            android:title="Settings"/>
 
         <item
             android:icon="@drawable/ic_baseline_picture_as_pdf_24"
             android:id="@+id/pdf_portfolia"
-            android:title="Download Send Porffolia"/>
+            android:title="Download Send Portfolio"/>
     </group>
     <item android:title="Profile">
         <menu>
             <group android:checkableBehavior="single">
+                <!--
                 <item
-                    android:icon="@drawable/ic_baseline_home_24"
-                    android:id="@+id/home"
-                    android:title="Home"
+                    android:icon="@drawable/ic_baseline_settings_24"
+                    android:id="@+id/settings"
+                    android:title="Settings"
                     app:showAsAction="ifRoom"/>
+                -->
                 <item
                     android:icon="@drawable/ic_information"
                     android:id="@+id/about_app"

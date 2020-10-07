@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.languageBiography.LearningAimsFragment">
+    <RelativeLayout
+        android:id="@+id/relative_main"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:elevation="3dp"
+        android:background="?android:attr/windowBackground"
+        android:layout_marginBottom="@dimen/fiveteen"
+        android:padding="@dimen/five">
+        <ImageView
+            android:id="@+id/back_aims"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_arrow"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/five"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/logo_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="My Aims"
+            android:textSize="@dimen/twentysp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="58dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_learning_aims"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false"/>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:text="  Add  data"
+        android:drawableLeft="@drawable/ic_baseline_add_24"
+        android:textColor="@color/white"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:theme="@style/MyMaterialTheme"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+        >
+
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+</FrameLayout>

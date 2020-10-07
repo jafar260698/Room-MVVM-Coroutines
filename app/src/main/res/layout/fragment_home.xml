@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/twenty"
                 android:fontFamily="@font/roboto"
-                android:text="Language passport"
+                android:text="Electronic-Portfolia"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:textColor="@color/black"
@@ -112,7 +112,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_toEndOf="@+id/profile"
                     android:fontFamily="@font/roboto"
-                    android:text="0815 *** **"
+                    android:text="*** ***"
                     android:textColor="#ffff"
                     android:textSize="16sp">
                 </TextView>
@@ -135,12 +135,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
                 android:fontFamily="@font/roboto"
-                android:text="Situation"
+                android:text="Sections"
                 android:textColor="#000000"
                 android:textSize="@dimen/twentyfour">
             </TextView>
-
             <LinearLayout
+                android:id="@+id/linear_passport"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -150,8 +150,208 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:paddingTop="@dimen/twelve"
-                android:paddingBottom="@dimen/twelve"
-                >
+                android:paddingBottom="@dimen/twelve">
+                <LinearLayout
+                    android:id="@+id/linear_layout_passport"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg"
+                    android:padding="@dimen/eighteen">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_study">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Language passport"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp">
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_drop_passport"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/self_assesment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="34dp">
+                    <ImageView
+                        android:id="@+id/icon_arp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_school">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="@dimen/sixteen"
+                        android:layout_toEndOf="@id/icon_arp"
+                        android:text="Self-Assessment"
+                        android:textColor="#202020"
+                        android:textSize="20sp">
+                    </TextView>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_dark">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="34dp">
+
+                    <ImageView
+                        android:id="@+id/icon_setp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_school">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="@dimen/sixteen"
+                        android:layout_toEndOf="@id/icon_setp"
+                        android:text="Summary of My Language Learning Experiences"
+                        android:textColor="#202020"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_dark">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="34dp">
+
+                    <ImageView
+                        android:id="@+id/icon_shp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_school"
+                        android:layout_centerVertical="true">
+
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/icon_shp"
+                        android:layout_marginEnd="@dimen/sixteen"
+                        android:text="My Linguistic and Intercultural Experiences"
+                        android:textColor="#202020"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_dark">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_self_assesment_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginTop="34dp">
+
+                    <ImageView
+                        android:id="@+id/icon_serp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_school">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@id/icon_serp"
+                        android:layout_marginEnd="@dimen/sixteen"
+                        android:text="Self-Assessment Grid"
+                        android:textColor="#202020"
+                        android:textSize="20sp">
+                    </TextView>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/arrow_dark">
+
+                    </ImageView>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:elevation="@dimen/ten"
+                android:orientation="horizontal"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingTop="@dimen/twelve"
+                android:paddingBottom="@dimen/twelve">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -177,8 +377,15 @@
                     </TextView>
                 </LinearLayout>
                 </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_drop"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
             <RelativeLayout
+                android:id="@+id/relative_learning_aims"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
@@ -227,7 +434,6 @@
                     android:layout_height="25dp"
                     android:layout_centerVertical="true"
                     android:src="@drawable/ic_school">
-
                 </ImageView>
 
                 <TextView
@@ -237,7 +443,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="@dimen/sixteen"
                     android:layout_toEndOf="@id/icon_set"
-                    android:text="My language background"
+                    android:text="My language learning background"
                     android:textColor="#202020"
                     android:textSize="20sp">
 
@@ -317,7 +523,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_toEndOf="@id/icon_ser"
                     android:layout_marginEnd="@dimen/sixteen"
-                    android:text="My language achievements and objectives"
+                    android:text="My language learning achievements and objectives"
                     android:textColor="#202020"
                     android:textSize="20sp">
                 </TextView>
@@ -332,11 +538,12 @@
                 </ImageView>
             </RelativeLayout>
 
+            </LinearLayout>
             <LinearLayout
                 android:id="@+id/dossier_linear"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="8dp"
                 android:elevation="@dimen/ten"
                 android:background="@drawable/ripple_effect"
                 android:clickable="true"

@@ -13,10 +13,18 @@
         tools:layout="@layout/fragment_splash" >
         <action
             android:id="@+id/action_splashFragment_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_splashFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/dossierFragment"
@@ -25,7 +33,11 @@
         tools:layout="@layout/fragment_dossier" >
         <action
             android:id="@+id/action_dossierFragment_to_writingFragment"
-            app:destination="@id/writingFragment" />
+            app:destination="@id/writingFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_dossierFragment_to_myCertificatesFragment"
             app:destination="@id/myCertificatesFragment"
@@ -34,8 +46,13 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
         <action
-            android:id="@+id/action_dossierFragment_to_spaekingFragment"
-            app:destination="@id/spaekingFragment" />
+            android:id="@+id/action_dossierFragment_to_speakingFragment"
+            app:destination="@id/speakingFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -44,7 +61,11 @@
         tools:layout="@layout/fragment_register" >
         <action
             android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -58,13 +79,7 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
-        <action
-            android:id="@+id/action_homeFragment_to_registerFragment"
-            app:destination="@id/registerFragment"
-            app:enterAnim="@anim/bottom_animation"
-            app:exitAnim="@anim/slide_out_right"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+
         <action
             android:id="@+id/action_homeFragment_to_myProfileFragment"
             app:destination="@id/myProfileFragment"
@@ -72,17 +87,61 @@
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_selfAssessmentGridFragment"
+            app:destination="@id/selfAssessmentGridFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_summaryofLanguageFragment"
+            app:destination="@id/summaryofLanguageFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_myLinguisticFragment"
+            app:destination="@id/myLinguisticFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_learningAimsFragment"
+            app:destination="@id/learningAimsFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_homeFragment_to_selfAssessmentFragment"
+            app:destination="@id/selfAssessmentFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageBackFragment2"
+            app:destination="@id/languageBackFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_linguisticFragment"
+            app:destination="@id/linguisticFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_languageAchieveFragment"
+            app:destination="@id/languageAchieveFragment" />
     </fragment>
     <fragment
         android:id="@+id/writingFragment"
         android:name="com.example.portfolia.ui.dossier.WritingFragment"
         android:label="fragment_writing"
-        tools:layout="@layout/fragment_writing" />
-    <fragment
-        android:id="@+id/spaekingFragment"
-        android:name="com.example.portfolia.ui.dossier.SpaekingFragment"
-        android:label="fragment_spaeking"
-        tools:layout="@layout/fragment_spaeking" />
+        tools:layout="@layout/fragment_writing" >
+        <action
+            android:id="@+id/action_writingFragment_to_writingAddFragment"
+            app:destination="@id/writingAddFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
     <fragment
         android:id="@+id/myCertificatesFragment"
         android:name="com.example.portfolia.ui.dossier.MyCertificatesFragment"
@@ -106,4 +165,80 @@
         android:name="com.example.portfolia.ui.dialogfragment.MyProfileFragment"
         android:label="fragment_my_profile"
         tools:layout="@layout/fragment_my_profile" />
+    <fragment
+        android:id="@+id/writingAddFragment"
+        android:name="com.example.portfolia.ui.dossier.WritingAddFragment"
+        android:label="fragment_writing_add"
+        tools:layout="@layout/fragment_writing_add" />
+    <fragment
+        android:id="@+id/audioListFragment"
+        android:name="com.example.portfolia.ui.dossier.AudioListFragment"
+        android:label="fragment_audio_list"
+        tools:layout="@layout/fragment_audio_list" />
+    <fragment
+        android:id="@+id/speakingFragment"
+        android:name="com.example.portfolia.ui.dossier.SpeakingFragment"
+        android:label="fragment_speaking"
+        tools:layout="@layout/fragment_speaking" >
+        <action
+            android:id="@+id/action_speakingFragment_to_audioListFragment"
+            app:destination="@id/audioListFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/summaryofLanguageFragment"
+        android:name="com.example.portfolia.ui.languagePassport.SummaryofLanguageFragment"
+        android:label="fragment_summaryof_language"
+        tools:layout="@layout/fragment_summaryof_language" />
+    <fragment
+        android:id="@+id/selfAssessmentGridFragment"
+        android:name="com.example.portfolia.ui.languagePassport.SelfAssessmentGridFragment"
+        android:label="fragment_self_assessment_grid"
+        tools:layout="@layout/fragment_self_assessment_grid" />
+    <fragment
+        android:id="@+id/selfAssessmentFragment"
+        android:name="com.example.portfolia.ui.languagePassport.SelfAssessmentFragment"
+        android:label="fragment_self_assessment"
+        tools:layout="@layout/fragment_self_assessment" />
+    <fragment
+        android:id="@+id/myLinguisticFragment"
+        android:name="com.example.portfolia.ui.languagePassport.MyLinguisticFragment"
+        android:label="fragment_my_linguistic"
+        tools:layout="@layout/fragment_my_linguistic" />
+    <fragment
+        android:id="@+id/learningAimsFragment"
+        android:name="com.example.portfolia.ui.languageBiography.LearningAimsFragment"
+        android:label="fragment_learning_aims"
+        tools:layout="@layout/fragment_learning_aims" >
+        <action
+            android:id="@+id/action_learningAimsFragment_to_learningAimsAddFragment"
+            app:destination="@id/learningAimsAddFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/learningAimsAddFragment"
+        android:name="com.example.portfolia.ui.languageBiography.LearningAimsAddFragment"
+        android:label="fragment_learning_aims_add"
+        tools:layout="@layout/fragment_learning_aims_add" />
+    <fragment
+        android:id="@+id/languageAchieveFragment"
+        android:name="com.example.portfolia.ui.languageBiography.LanguageAchieveFragment"
+        android:label="fragment_language_achieve"
+        tools:layout="@layout/fragment_language_achieve" />
+    <fragment
+        android:id="@+id/linguisticFragment"
+        android:name="com.example.portfolia.ui.languageBiography.LinguisticFragment"
+        android:label="fragment_linguistic"
+        tools:layout="@layout/fragment_linguistic" />
+    <fragment
+        android:id="@+id/languageBackFragment2"
+        android:name="com.example.portfolia.ui.languageBiography.LanguageBackFragment"
+        android:label="fragment_language_back"
+        tools:layout="@layout/fragment_language_back" />
 </navigation>

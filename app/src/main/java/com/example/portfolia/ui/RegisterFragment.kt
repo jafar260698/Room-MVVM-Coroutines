@@ -71,9 +71,7 @@ class RegisterFragment : Fragment() {
     var place_of_birth:EditText?=null
     var nationality:EditText?=null
     var mother_tongue:EditText?=null
-    var field_of_study:EditText?=null
     var date_started:EditText?=null
-    var parol:EditText?=null
     val TAG="RegisterFragment"
 
     var outputStream:OutputStream?=null
@@ -89,9 +87,7 @@ class RegisterFragment : Fragment() {
         place_of_birth=view.findViewById(R.id.place_of_birth)
         nationality=view.findViewById(R.id.nationality)
         mother_tongue=view.findViewById(R.id.mother_tongue)
-        field_of_study=view.findViewById(R.id.field_of_study)
         date_started=view.findViewById(R.id.date_started)
-        parol=view.findViewById(R.id.parol)
         preference= RegisterPreference(requireActivity())
 
         date_of_birth!!.setOnClickListener {
@@ -101,6 +97,7 @@ class RegisterFragment : Fragment() {
                 calendar[Calendar.DAY_OF_MONTH]
             ).show()
         }
+
         date_started!!.setOnClickListener {
             DatePickerDialog(
                 requireActivity(), date2, calendar[Calendar.YEAR], calendar[Calendar.MONTH],
@@ -127,9 +124,7 @@ class RegisterFragment : Fragment() {
                     place_of_birth!!.text.toString(),
                     nationality!!.text.toString(),
                     mother_tongue!!.text.toString(),
-                    field_of_study!!.text.toString(),
                     date_started!!.text.toString(),
-                    parol!!.text.toString(),
                     externalstorage!!
                 )
                 viewModel.saveRegistration(registrationEntity!!)
@@ -137,7 +132,7 @@ class RegisterFragment : Fragment() {
                 preference!!.setRegistration(Constants.IS_REGISTERED,true)
                 this.findNavController().navigate(R.id.action_registerFragment_to_homeFragment,null,
                     NavOptions.Builder()
-                        .setPopUpTo(R.id.splashFragment,
+                        .setPopUpTo(R.id.registerFragment,
                             true).build())
             }else{
                 Function.showToast(requireActivity(),"External storage empty")

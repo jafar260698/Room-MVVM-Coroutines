@@ -9,209 +9,260 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/twenty"
-        android:orientation="vertical">
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/twenty">
+
+        <RelativeLayout
+            android:id="@+id/relative_writing"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="@dimen/fiveteen"
+            android:background="?android:attr/windowBackground"
+            android:elevation="2dp"
+            android:padding="@dimen/five">
+
+            <ImageView
+                android:id="@+id/back_profile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/five"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto"
+                android:text="@string/my_account"
+                android:textSize="@dimen/twentysp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/edit_profile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/fiveteen"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_edit" />
+        </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/layoutPicture"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:baselineAligned="false">
+
             <androidx.cardview.widget.CardView
-                android:layout_centerInParent="true"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:layout_centerInParent="true"
                 app:cardCornerRadius="70dp">
+
                 <ImageView
-                    android:id="@+id/picture"
+                    android:id="@+id/picture_myprofile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/logo" />
+                    android:src="@drawable/profil" />
             </androidx.cardview.widget.CardView>
+
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fabChoosePic"
+                android:id="@+id/fabChoosePic_myprofile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="10dp"
-                app:srcCompat="@drawable/ic_picture"
-                app:elevation="@dimen/five"
-                app:borderWidth="1dp"
-                android:tint="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/five"
+                android:layout_marginBottom="@dimen/five"
                 android:backgroundTint="@color/white"
-                app:fabSize="mini"/>
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:borderWidth="1dp"
+                app:elevation="@dimen/five"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_picture" />
         </RelativeLayout>
+
         <androidx.cardview.widget.CardView
-            android:visibility="visible"
             android:id="@+id/layoutName"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="@dimen/twenty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="@dimen/cardview_default_elevation"
-            app:cardCornerRadius="0dp">
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/twenty"
+            android:visibility="visible"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="16dp">
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
                 <TextView
-                    android:text="Overview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
                     android:fontFamily="sans-serif-light"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:text="Overview"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/five"
-                    android:hint="Name">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/name"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="16dp">
-
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_date"
-                        android:layout_width="26dp"
-                        android:layout_height="26dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_marginStart="10dp"
-                        android:layout_width="match_parent"
-                        android:padding="@dimen/five"
-                        android:hint="Date of Birth"
-                        android:layout_height="wrap_content">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/date_of_birth"
-                            android:inputType="date"
-                            android:fontFamily="sans-serif-light"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/five"
-                    android:hint="Place of birth">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/place_of_birth"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:padding="@dimen/five"
-                    android:hint="Nationality"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/nationality"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:padding="@dimen/five"
-                    android:hint="My mother language"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/mother_tongue"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Field od study"
-                    android:padding="@dimen/five">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/field_of_study"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </com.google.android.material.textfield.TextInputLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="16dp">
-
-                    <ImageView
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_date"
-                        android:layout_width="26dp"
-                        android:layout_height="26dp" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_marginStart="10dp"
-                        android:hint="Data of Starting Using ELP"
-                        android:padding="@dimen/five"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/date_started"
-                            android:inputType="date"
-                            android:fontFamily="sans-serif-light"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/five"
-                    android:hint="Parol">
+                    android:hint="Name"
+                    android:padding="@dimen/five">
+
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/parol"
-                        android:fontFamily="sans-serif-light"
-                        android:inputType="textPersonName|textCapWords"
+                        android:id="@+id/name_myprofile"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
                 </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:hint="Date of Birth"
+                        android:padding="@dimen/five">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/date_of_birth_myprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="date" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Place of birth"
+                    android:padding="@dimen/five">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/place_of_birth_myprofile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nationality"
+                    android:padding="@dimen/five">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/nationality_myprofile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="My native language"
+                    android:padding="@dimen/five">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mother_tongue_myprofile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+              <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:hint="Data of Starting Using ELP"
+                        android:padding="@dimen/five">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/date_started_myprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:fontFamily="sans-serif-light"
+                            android:inputType="date" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <Button
-            android:id="@+id/save_reg"
+            android:id="@+id/save_reg_myprofile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
-            android:padding="@dimen/ten"
-            android:text="OK"
             android:layout_marginStart="@dimen/twenty"
             android:layout_marginEnd="@dimen/twenty"
-            android:textSize="@dimen/twentysp"/>
+            android:backgroundTint="@color/blue"
+            android:enabled="false"
+            android:padding="@dimen/ten"
+            android:text="UPDATE"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/twentysp" />
     </LinearLayout>
 
 </ScrollView>

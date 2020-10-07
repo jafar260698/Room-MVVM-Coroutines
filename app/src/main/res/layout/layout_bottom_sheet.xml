@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="25dp"
+        android:src="@drawable/ic_warning"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chiqish"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twenty"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:text="Haqiqatdan ham akkauntdan chiqmoqchimisiz?"
+        android:textSize="@dimen/textsize_standart"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="13dp"
+        android:id="@+id/btn_dismiss"
+        android:layout_marginBottom="@dimen/textsize_standart"
+        android:backgroundTint="@color/blue"
+        android:text="Bekor qilish"
+        app:cornerRadius="@dimen/twenty"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="13dp"
+        app:cornerRadius="@dimen/twenty"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="@dimen/textsize_standart"
+        android:backgroundTint="@color/blue"
+        android:text="Chiqish"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

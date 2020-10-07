@@ -5,35 +5,44 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/lightwhite"
+    android:orientation="vertical"
     tools:context=".ui.SplashFragment">
 
     <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:id="@+id/imageview_splash"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerVertical="true"
         android:scaleType="centerCrop"
-        android:visibility="gone"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logoelp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/title_splash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:textSize="30sp"
-        android:gravity="center"
+        android:layout_marginTop="@dimen/twenty"
         android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:text="Uzbek Model of European Language Portfolio (Uz Elp) for Pre-Service English Teacher Training Programme Students"
+        android:textAllCaps="false"
         android:textColor="@color/blue"
-        android:text="Uzbek Model of European Language Porfolia"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_splash"
 
-    <com.airbnb.lottie.LottieAnimationView
+        />
+    <!--<com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         app:lottie_autoPlay="true"
         android:layout_width="wrap_content"
@@ -45,20 +54,23 @@
         android:layout_marginTop="50dp"
         app:lottie_rawRes="@raw/splash"
         app:layout_constraintVertical_bias="0"
-        />
-
+        /> -->
     <TextView
         android:id="@+id/e_version"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
-        android:gravity="center"
         android:textColor="@color/blue"
-        android:text="eVersion 1.0."
+        android:text="Electronic Version 1.0.0"
         android:textStyle="bold"
         android:textSize="@dimen/eighteensp"
+        android:layout_marginBottom="@dimen/fiveteen"
+        android:layout_gravity="bottom|center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

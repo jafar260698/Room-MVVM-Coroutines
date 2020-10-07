@@ -15,7 +15,7 @@
         android:layout_marginBottom="@dimen/fiveteen"
         android:padding="@dimen/five">
         <ImageView
-            android:id="@+id/back_change"
+            android:id="@+id/cert_add_back"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_arrow"
@@ -102,6 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue"
+        android:background="@drawable/button_design3"
         android:padding="@dimen/ten"
         android:layout_marginTop="@dimen/ten"
         android:layout_marginStart="@dimen/fiveteen"
