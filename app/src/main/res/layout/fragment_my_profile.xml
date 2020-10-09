@@ -54,7 +54,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:focusable="true"
-                android:visibility="gone"
+                android:visibility="visible"
                 android:src="@drawable/ic_baseline_edit" />
         </RelativeLayout>
 
@@ -261,7 +261,7 @@
             android:enabled="false"
             android:padding="@dimen/ten"
             android:text="UPDATE"
-            android:visibility="gone"
+            android:visibility="visible"
             android:textColor="@color/white"
             android:textSize="@dimen/twentysp" />
     </LinearLayout>
