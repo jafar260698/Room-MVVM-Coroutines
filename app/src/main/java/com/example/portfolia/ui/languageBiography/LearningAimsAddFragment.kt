@@ -10,32 +10,36 @@ import android.widget.AdapterView
 import android.widget.AdapterView.OnItemSelectedListener
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.portfolia.R
 import com.example.portfolia.database.Entity.MyAims
-import com.example.portfolia.ui.MainActivity
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
 import kotlinx.android.synthetic.main.fragment_learning_aims_add.*
 
 class LearningAimsAddFragment : Fragment() {
-
     lateinit var viewModel: RegisterViewModel
     var spinner:Spinner?=null
     val TAG="LearningAimsAddFragment"
     var language=""
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_learning_aims_add, container, false)
-    }
+        savedInstanceState: Bundle?):
+            View? {return inflater.inflate(R.layout.fragment_learning_aims_add, container, false) }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel= (activity as MainActivity).viewModel
         spinner=view.findViewById(R.id.spinner_aims)
+        val arguments=arguments?.getString("idsi")
+        if (arguments=="2"){
+            title_aims.text="Update aims"
+            edit_aims.visibility=View.VISIBLE
+            delete_aims.visibility=View.VISIBLE
+            save_aims.text="Update"
+        }
+
         val arrayList: ArrayList<String> = ArrayList()
         arrayList.add("English")
         arrayList.add("Russian")

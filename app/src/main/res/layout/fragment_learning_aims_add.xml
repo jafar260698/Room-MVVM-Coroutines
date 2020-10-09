@@ -7,10 +7,9 @@
     tools:context=".ui.languageBiography.LearningAimsAddFragment">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/five"
         android:orientation="vertical">
-
 
     <RelativeLayout
         android:id="@+id/relative_writing"
@@ -31,6 +30,7 @@
             android:layout_marginStart="@dimen/five"
             android:focusable="true"/>
         <TextView
+            android:id="@+id/title_aims"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -38,18 +38,41 @@
             android:textSize="@dimen/twentysp"
             android:textStyle="bold"
             android:fontFamily="@font/roboto"/>
-
+        <ImageView
+            android:id="@+id/edit_aims"
+            android:visibility="gone"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_baseline_create_24"
+            android:layout_toLeftOf="@+id/delete_aims"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="@dimen/fiveteen"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"/>
+        <ImageView
+            android:id="@+id/delete_aims"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/five"
+            android:focusable="true"/>
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/linear_moder"
-        android:layout_below="@+id/asosiy_faoliyat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/white"
+        android:background="#fcfafa"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        >
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:text="@string/choose_the_language"

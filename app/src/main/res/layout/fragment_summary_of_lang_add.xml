@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.languagePassport.SummaryOfLangAddFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/twenty"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/relative_map_top_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@color/lightwhite"
+            android:elevation="@dimen/five">
+            <ImageButton
+                android:id="@+id/about_back"
+                android:visibility="visible"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_baseline_clear_24"
+                android:layout_alignParentStart="true"
+                />
+            <TextView
+                android:id="@+id/manzil_saqlash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/twentysp"
+                android:text="Add new data"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/blue"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:id="@+id/layoutName"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Language"
+                    android:padding="@dimen/five">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:padding="@dimen/five"
+                    android:hint="Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/mother_tongue"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/five"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/date_of_birth"
+                            android:inputType="date"
+                            android:hint="From"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginStart="10dp"
+                        android:padding="@dimen/five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/date_started"
+                            android:hint="To"
+                            android:inputType="date"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:id="@+id/save_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/button_design3"
+            android:padding="@dimen/ten"
+            android:text="Save"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginEnd="@dimen/twenty"
+            android:textSize="@dimen/twentysp"/>
+    </LinearLayout>
+</FrameLayout>

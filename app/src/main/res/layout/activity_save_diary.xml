@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SaveDiary">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_writing"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:elevation="@dimen/five"
+                android:background="?android:attr/windowBackground"
+                android:layout_marginBottom="@dimen/fiveteen"
+                android:padding="@dimen/five">
+
+                <TextView
+                    android:id="@+id/title_aims"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="My language learning diary"
+                    android:textSize="@dimen/twentysp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/roboto"/>
+                <ImageView
+                    android:id="@+id/edit_aims"
+                    android:visibility="gone"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_baseline_create_24"
+                    android:layout_toLeftOf="@+id/delete_aims"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:layout_marginEnd="@dimen/fiveteen"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"/>
+                <ImageView
+                    android:id="@+id/delete_aims"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_delete"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:layout_marginStart="@dimen/five"
+                    android:focusable="true"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fcfafa"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="How many hours did I spend on self-study this week? "
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinner_spending_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fcfafa"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="What aspects of language or skills did I work on most?"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinner_aspect_language"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fcfafa"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="When did I work productively?"
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinner_productivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fcfafa"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:text="Where did I work most productively? "
+                    android:layout_marginLeft="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/spinner_were_prod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="3dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textPersonName" />
+
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="What methods or ways did I use during the self-study?"
+                android:padding="@dimen/five">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/methods_diary"
+                    android:layout_width="match_parent"
+                    android:gravity="top|left"
+                    android:layout_height="100dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="What was the outcome of my self-study? "
+                android:padding="@dimen/five">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/outcome_diary"
+                    android:layout_width="match_parent"
+                    android:gravity="top|left"
+                    android:layout_height="100dp"
+                    android:fontFamily="sans-serif-light"
+                    android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/save_diary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:padding="@dimen/ten"
+                android:text="OK"
+                android:layout_marginTop="@dimen/fiveteen"
+                android:background="@drawable/button_design3"
+                android:layout_marginStart="@dimen/twenty"
+                android:layout_marginEnd="@dimen/twenty"
+                android:layout_marginBottom="@dimen/twenty"
+                android:textSize="@dimen/twentysp"/>
+        </LinearLayout>
+</ScrollView>

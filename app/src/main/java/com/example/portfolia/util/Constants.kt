@@ -10,5 +10,6 @@ class Constants {
         const val PDF_SELECTION_CODE=121
 
         const val IS_REGISTERED="is_first"
+        const val IS_SELF_ASSESSED="is_self_assessment"
     }
 }

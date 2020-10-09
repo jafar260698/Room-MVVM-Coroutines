@@ -46,8 +46,19 @@ interface RegisterDao {
     @Query("SELECT *FROM aims ORDER BY id DESC")
     fun getAims(): LiveData<List<MyAims>>
 
+    @Delete
+    suspend fun deleteAims(aims: MyAims)
     // My Diary
     @Query("SELECT * FROM diary ORDER BY id DESC")
     fun getAllDiary() :LiveData<List<MyDiary>>
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertDiary(myDiary: MyDiary): Long
+
+    // Self Assessment
+    @Query("SELECT * FROM self_assessment ORDER BY id DESC LIMIT 1")
+    fun getSelfAssessment(): LiveData<List<SelfAssesment>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertSelfAssessment(selfAssesment: SelfAssesment): Long
 
 }

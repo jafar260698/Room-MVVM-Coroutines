@@ -16,8 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.portfolia.R
 import com.example.portfolia.adapter.WritingAdapter
 import com.example.portfolia.database.Entity.Writing
-import com.example.portfolia.ui.MainActivity
-import com.example.portfolia.util.Function
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
 import kotlinx.android.synthetic.main.fragment_writing.*
 

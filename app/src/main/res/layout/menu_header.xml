@@ -24,13 +24,12 @@
     <TextView
         android:id="@+id/res_header_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="@dimen/twenty"
-        android:fontFamily="@font/bungee"
-        android:text="Xush Kelibsiz"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:fontFamily="@font/roboto"
+        android:text=" Uzbek Model of European Language Portfolio (Uz Elp) for Pre-Service English Teacher Training Programme Students"
         android:textColor="@color/blue"
-        android:textSize="26sp" />
+        android:textSize="24sp" />
 
 </RelativeLayout>

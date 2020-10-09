@@ -12,4 +12,10 @@ class RegisterPreference(context: Context) {
     }
 
     fun getRegistration(key: String):Boolean?{return sharedPreference.getBoolean(key,false)}
+
+    fun setSelfAssessment(key:String,boolean: Boolean){
+        sharedPreference.edit().putBoolean(key,boolean).apply()
+    }
+    fun getSelfAssessment(key: String):Boolean?{return sharedPreference.getBoolean(key,false)}
+
 }

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/twenty"
+    android:elevation="@dimen/ten"
+    android:background="@drawable/bottom_sheet_background"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    android:fitsSystemWindows="true"
+    app:behavior_peekHeight="1dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/layoutName"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Language"
+                    android:padding="@dimen/five">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/language_bottomsheet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:padding="@dimen/five"
+                    android:hint="Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/details_bottomsheet"
+                        android:fontFamily="sans-serif-light"
+                        android:inputType="textPersonName|textCapWords"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/five"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/date_of_birth_bottomsheet"
+                            android:inputType="date"
+                            android:hint="From"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <ImageView
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_date"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginStart="10dp"
+                        android:padding="@dimen/five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/date_started_bottomsheet"
+                            android:hint="To"
+                            android:inputType="date"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/save_bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/button_design3"
+            android:padding="@dimen/ten"
+            android:text="Save"
+            android:layout_marginStart="@dimen/twenty"
+            android:layout_marginEnd="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:textSize="@dimen/twentysp"/>
+    </LinearLayout>

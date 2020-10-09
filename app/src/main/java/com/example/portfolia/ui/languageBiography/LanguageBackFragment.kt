@@ -11,11 +11,15 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.portfolia.R
-import com.example.portfolia.ui.MainActivity
+import com.example.portfolia.adapter.AimsAdapter
+import com.example.portfolia.adapter.CertificateAdapter
+import com.example.portfolia.adapter.DiaryAdapter
+import com.example.portfolia.ui.activity.MainActivity
+import com.example.portfolia.util.Function
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
 
 class LanguageBackFragment : Fragment() {
-
+    lateinit var adapter:DiaryAdapter
     lateinit var viewModel: RegisterViewModel
     lateinit var recyclerview: RecyclerView
     private var layoutManager: RecyclerView.LayoutManager? = null
@@ -38,14 +42,15 @@ class LanguageBackFragment : Fragment() {
             setHasFixedSize(true)
         }
         viewModel.getDiary().observe(viewLifecycleOwner, Observer {response->
-            Log.d(TAG,response.toString())
+            Log.e(TAG,response.toString())
             if (response.size>0){
-
+                adapter= DiaryAdapter(requireActivity(),response)
+                recyclerview.adapter=adapter
+                adapter.notifyDataSetChanged()
             }else{
-
+               Function.showToast(requireActivity(),"No data found !!!")
             }
         })
 
     }
-
 }

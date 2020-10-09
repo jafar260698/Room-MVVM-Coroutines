@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/photo_gallery"
-        android:title="Galereyya"
+        android:title="Gallery"
         android:icon="@drawable/ic_baseline_gallery"
         app:showAsAction=""/>
     <item
         android:id="@+id/photo_take"
-        android:title="Rasm olish"
+        android:title="Camera"
         android:icon="@drawable/ic_baseline_camera"
         app:showAsAction=""/>
 

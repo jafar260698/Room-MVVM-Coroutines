@@ -2,7 +2,6 @@ package com.example.portfolia.ui
 
 import android.content.SharedPreferences
 import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -11,24 +10,20 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.activity.OnBackPressedCallback
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.example.portfolia.R
 import com.example.portfolia.database.Entity.RegistrationEntity
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.portfolia.ui.dialogfragment.AboutFragment
 import com.example.portfolia.ui.dialogfragment.MyProfileFragment
 import com.example.portfolia.ui.dialogfragment.PdfPortfoliaFragment
-import com.example.portfolia.ui.dialogfragment.SettingsFragment
 import com.example.portfolia.util.Constants
 import com.example.portfolia.util.Function
 import com.example.restaurants.ui.preference.RegisterPreference
@@ -55,7 +50,6 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
     var registrationEntity: List<RegistrationEntity>?=null
     // Header
     var profile_image_header:ImageView?=null
-    var progressbar:ProgressBar?=null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -72,8 +66,8 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
         username=view.findViewById(R.id.username)
         linear_drop=view.findViewById(R.id.linear_drop)
         linear_drop_passport=view.findViewById(R.id.linear_drop_passport)
-        progressbar=view.findViewById(R.id.profile_image_header)
-        profile_image_header=view.findViewById(R.id.profile_image_header)
+        val header:View=navigationView!!.getHeaderView(0)
+        profile_image_header=header.findViewById(R.id.profile_image_header)
         if (preference!!.getRegistration(Constants.IS_REGISTERED)!!){
             Log.d(TAG, "registered")
             viewModel.getRegistration()
@@ -109,7 +103,7 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
                         .applyDefaultRequestOptions(requestOptions2)
                         .load(Uri.parse(ss))
                         //.transition(DrawableTransitionOptions.withCrossFade())
-                        .into(profile_image_header!!)
+                        //  .into(profile_image_header!!)
                 })
 
         }else    Log.d(TAG, "unregistered")
@@ -117,6 +111,12 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
         // OnClick methods
         view.findViewById<LinearLayout>(R.id.dossier_linear).setOnClickListener {
             this.findNavController().navigate(R.id.action_homeFragment_to_dossierFragment)
+        }
+        view.findViewById<RelativeLayout>(R.id.relative_background_learning).setOnClickListener {
+            this.findNavController().navigate(R.id.action_homeFragment_to_languageBackFragment2)
+        }
+        view.findViewById<View>(R.id.summary_of_mylanguage).setOnClickListener {
+            this.findNavController().navigate(R.id.action_homeFragment_to_summaryofLanguageFragment)
         }
 
         view.findViewById<View>(R.id.linear_language).setOnClickListener {
@@ -170,7 +170,7 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
                 Function.showToast(requireActivity(),"Deleted")
             }else  Function.showToast(requireActivity(),"Not Deleted")
         }
-    */
+
         val callback: OnBackPressedCallback =
             object : OnBackPressedCallback(true /* enabled by default */) {
                 override fun handleOnBackPressed() {
@@ -180,7 +180,7 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
                 }
             }
         requireActivity().onBackPressedDispatcher.addCallback(requireActivity(), callback)
-
+*/
         return view
     }
 
@@ -243,6 +243,8 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
                         )
                     preferences2.edit().clear().apply()
                     viewModel.deleteReg()
+                    requireActivity().deleteDatabase("portfolia_db.db")
+
                     Function.showToast(requireActivity(), "Log out")
                     requireActivity().finish()
                 }
@@ -267,6 +269,7 @@ class HomeFragment : Fragment(),NavigationView.OnNavigationItemSelectedListener 
                 val dial4: DialogFragment = MyProfileFragment()
                 dial4.show(childFragmentManager, "profile")
             }
+
         }
         return true
     }

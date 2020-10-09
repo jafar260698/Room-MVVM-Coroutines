@@ -4,44 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/lightwhite"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".ui.SplashFragment">
 
-    <ImageView
-        android:id="@+id/imageview_splash"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_centerVertical="true"
-        android:scaleType="centerCrop"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logoelp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
-
-    <TextView
-        android:id="@+id/title_splash"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/twenty"
-        android:fontFamily="@font/bungee"
-        android:gravity="center"
-        android:lineSpacingExtra="2dp"
-        android:text="Uzbek Model of European Language Portfolio (Uz Elp) for Pre-Service English Teacher Training Programme Students"
-        android:textAllCaps="false"
-        android:textColor="@color/blue"
-        android:textSize="26sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageview_splash"
-
-        />
     <!--<com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         app:lottie_autoPlay="true"
@@ -55,6 +21,39 @@
         app:lottie_rawRes="@raw/splash"
         app:layout_constraintVertical_bias="0"
         /> -->
+    <ImageView
+        android:id="@+id/imageview_splash"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logoelp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
+
+    <TextView
+        android:id="@+id/title_splash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/thirty"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:text="Uzbek Model of European Language Portfolio"
+        android:textAllCaps="false"
+        android:textColor="@color/blue"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/e_version"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_splash"
+        app:layout_constraintVertical_bias="0.12" />
+
     <TextView
         android:id="@+id/e_version"
         android:layout_width="wrap_content"

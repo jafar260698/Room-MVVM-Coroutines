@@ -1,6 +1,5 @@
 package com.example.portfolia.ui.dossier
 
-
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -17,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.portfolia.R
 import com.example.portfolia.adapter.CertificateAdapter
 import com.example.portfolia.database.Entity.Certificate
-import com.example.portfolia.ui.MainActivity
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.portfolia.util.Function
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
 
@@ -41,6 +40,9 @@ class MyCertificatesFragment : Fragment(),CertificateAdapter.OnItemClickListener
             isNestedScrollingEnabled=false
             setHasFixedSize(true)
         }
+        view.findViewById<View>(R.id.back_cer).setOnClickListener {
+            this.findNavController().popBackStack()
+        }
         Log.e(TAG,"Before Viewmodel"+"It")
         viewModel?.getCertificate()?.observe(viewLifecycleOwner, Observer {list->
             adapter= CertificateAdapter(requireActivity(),list,this)
@@ -54,6 +56,7 @@ class MyCertificatesFragment : Fragment(),CertificateAdapter.OnItemClickListener
     }
     override fun onItemClick(item: Certificate, position: Int) {
         Function.showToast(requireActivity(),item.file_uri.toString())
+
         val browserIntent = Intent(Intent.ACTION_VIEW)
         browserIntent.setDataAndType(Uri.parse(item.file_uri), "application/pdf")
         val chooser = Intent.createChooser(browserIntent, "Pdf ochadigan dasturni tanlang !!!")

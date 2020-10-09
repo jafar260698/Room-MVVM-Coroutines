@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,6 +44,7 @@
         android:id="@+id/recyclerview_learning_aims"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:nestedScrollingEnabled="false"/>
     </androidx.core.widget.NestedScrollView>
 
@@ -62,4 +64,4 @@
         >
 
     </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
-</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

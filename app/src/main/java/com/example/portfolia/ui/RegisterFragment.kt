@@ -27,7 +27,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
@@ -36,8 +35,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.portfolia.R
 import com.example.portfolia.database.Entity.RegistrationEntity
-import com.example.portfolia.database.MainDatabase
-import com.example.portfolia.repository.RegisterRepository
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.portfolia.util.Constants
 import com.example.portfolia.util.Constants.Companion.CAMERA_PERM_CODE
 import com.example.portfolia.util.Constants.Companion.CAMERA_REQUEST_CODE
@@ -46,7 +44,6 @@ import com.example.portfolia.util.FileUtil
 import com.example.portfolia.util.Function
 import com.example.restaurants.ui.preference.RegisterPreference
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
-import com.example.restaurants.ui.viewmodel.RegisterViewModelFactory
 import kotlinx.coroutines.launch
 import java.io.*
 import java.text.DecimalFormat
@@ -358,7 +355,7 @@ class RegisterFragment : Fragment() {
         val drawable:BitmapDrawable=profile_image?.drawable as BitmapDrawable
         val bitmap: Bitmap =drawable.bitmap
         val filePath:File=Environment.getExternalStorageDirectory()
-        val dir= File(filePath.absolutePath+"/Porfolia/")
+        val dir= File(filePath.absolutePath+"/Porfolia/Images/")
         dir.mkdirs()
         val file=File(dir,System.currentTimeMillis().toString()+".jpg")
         try {
@@ -374,10 +371,10 @@ class RegisterFragment : Fragment() {
         Log.e(TAG,file.path.toString())
 
         bitmap.compress(Bitmap.CompressFormat.JPEG,100,outputStream)
-        Function.showToast(requireActivity(),"Inserted image")
         outputStream?.flush()
         outputStream?.close()
     }
+
 
     private fun getReadableFileSize(size: Long): String {
         if (size <= 0) {
@@ -387,5 +384,4 @@ class RegisterFragment : Fragment() {
         val digitGroups = (Math.log10(size.toDouble()) / Math.log10(1024.0)).toInt()
         return DecimalFormat("#,##0.#").format(size / 1024.0.pow(digitGroups.toDouble())) + " " + units[digitGroups]
     }
-
 }

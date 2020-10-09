@@ -3,7 +3,6 @@ package com.example.portfolia.ui.dialogfragment
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +17,6 @@ import com.example.portfolia.R
 import com.example.portfolia.database.Entity.RegistrationEntity
 import com.example.portfolia.database.MainDatabase
 import com.example.portfolia.repository.RegisterRepository
-import com.example.portfolia.ui.MainActivity
 import com.example.restaurants.ui.viewmodel.RegisterViewModel
 import com.example.restaurants.ui.viewmodel.RegisterViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton

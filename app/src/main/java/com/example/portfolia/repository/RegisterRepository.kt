@@ -1,10 +1,7 @@
 package com.example.portfolia.repository
 
-import com.example.portfolia.database.Entity.Certificate
-import com.example.portfolia.database.Entity.MyAims
+import com.example.portfolia.database.Entity.*
 import com.example.portfolia.database.MainDatabase
-import com.example.portfolia.database.Entity.RegistrationEntity
-import com.example.portfolia.database.Entity.Writing
 
 
 class RegisterRepository(val db:MainDatabase){
@@ -29,8 +26,13 @@ class RegisterRepository(val db:MainDatabase){
     // aims
     suspend fun savetAim(myAims: MyAims)=db.getRegister().insertAims(myAims)
     fun getAims()=db.getRegister().getAims()
-
+    suspend fun deleteAims(aims: MyAims)=db.getRegister().deleteAims(aims)
 
     // My diary
     fun getAlldiary()=db.getRegister().getAllDiary()
+    suspend fun saveDiary(myDiary: MyDiary)=db.getRegister().insertDiary(myDiary)
+
+    // Self Assessment
+    fun getSelfAssessment()=db.getRegister().getSelfAssessment()
+    suspend fun saveSelf_Asses(selfAssesment: SelfAssesment)=db.getRegister().insertSelfAssessment(selfAssesment)
 }

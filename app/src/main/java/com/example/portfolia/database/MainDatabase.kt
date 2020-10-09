@@ -4,17 +4,25 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.portfolia.database.Dao.PassportDao
 import com.example.portfolia.database.Dao.RegisterDao
 import com.example.portfolia.database.Entity.*
+import com.example.portfolia.database.PassportEntity.higher_edu
+import com.example.portfolia.database.PassportEntity.primary_edu
+import com.example.portfolia.database.PassportEntity.secondary_edu
 
-@Database(entities = [RegistrationEntity::class,
+@Database(entities = [
+         RegistrationEntity::class,
          Certificate::class,
          Writing::class,
          MyAims::class,
-         MyDiary::class],version = 1,exportSchema = false)
+         MyDiary::class,
+         SelfAssesment::class,
+         primary_edu::class,secondary_edu::class,higher_edu::class],version = 1,exportSchema = false)
 abstract class MainDatabase : RoomDatabase() {
 
     abstract fun getRegister() :RegisterDao
+    abstract fun getPassport(): PassportDao
 
     companion object {
         @Volatile

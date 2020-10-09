@@ -22,4 +22,5 @@ class LanguageAchieveFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
+
 }

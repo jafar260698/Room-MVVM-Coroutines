@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alice"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:layout_marginBottom="1dp"
+            android:layout_marginHorizontal="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a@a.com"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111-111"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alice"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ffffff"
+            android:layout_marginBottom="1dp"
+            android:layout_marginHorizontal="1dp"/>
+
+    </TableRow>
+
+</FrameLayout>

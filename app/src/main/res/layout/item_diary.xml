@@ -12,20 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/ten"
         android:orientation="vertical">
-
-        <TextView
-            android:text="Questions"
-            android:fontFamily="@font/roboto"
-            android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/blue"
-            android:textSize="@dimen/twentysp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="@dimen/ten"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
         <TextView
             android:id="@+id/amount_of_time"
             android:text="1). How many hours did I spend on self-study this week? "
@@ -101,6 +87,19 @@
             android:textStyle="normal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
+        <TextView
+            android:id="@+id/time_inserted"
+            android:text="Time inserted"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sixteensp"
+            android:layout_marginBottom="@dimen/ten"
+            android:layout_marginTop="@dimen/three"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

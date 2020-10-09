@@ -1,10 +1,7 @@
 package com.example.portfolia.ui.dossier
 
 import android.app.Activity
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -14,12 +11,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import androidx.lifecycle.ViewModel
 import androidx.navigation.fragment.findNavController
 import com.example.portfolia.R
 import com.example.portfolia.database.Entity.Certificate
-import com.example.portfolia.ui.MainActivity
-import com.example.portfolia.util.Constants
+import com.example.portfolia.ui.activity.MainActivity
 import com.example.portfolia.util.Constants.Companion.PDF_SELECTION_CODE
 import com.example.portfolia.util.FileUtil
 import com.example.portfolia.util.Function
@@ -95,7 +90,7 @@ class CertificateAddFragment : Fragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == PDF_SELECTION_CODE && resultCode == Activity.RESULT_OK && data != null) {
             val selectedPdfFromStorage = data.data
-            showPdfFromUri(selectedPdfFromStorage)
+            //showPdfFromUri(selectedPdfFromStorage)
             saveImageToStorage(selectedPdfFromStorage)
         }
     }

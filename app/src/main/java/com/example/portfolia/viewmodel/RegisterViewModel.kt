@@ -5,10 +5,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.edmodo.util.Resource
-import com.example.portfolia.database.Entity.Certificate
-import com.example.portfolia.database.Entity.MyAims
-import com.example.portfolia.database.Entity.RegistrationEntity
-import com.example.portfolia.database.Entity.Writing
+import com.example.portfolia.database.Entity.*
 import com.example.portfolia.repository.RegisterRepository
 import kotlinx.coroutines.launch
 
@@ -45,7 +42,19 @@ class RegisterViewModel(
     // aims
     fun getAims()=repository.getAims()
     fun saveAims(myAims: MyAims)=viewModelScope.launch {repository.savetAim(myAims)}
+    fun deleteAims(myAims: MyAims)=viewModelScope.launch { repository.deleteAims(myAims)}
 
     // diary
     fun getDiary()=repository.getAlldiary()
+    fun saveDiary(myDiary: MyDiary)=viewModelScope.launch {
+        repository.saveDiary(myDiary)
+    }
+
+    // self_assessment
+    fun getSelf_Assessment()=repository.getSelfAssessment()
+    fun saveSelf_Assess(selfAssesment: SelfAssesment)=viewModelScope.launch {
+        repository.saveSelf_Asses(selfAssesment)
+    }
+
+
 }

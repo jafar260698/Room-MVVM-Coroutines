@@ -8,9 +8,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.portfolia.R
 import com.example.portfolia.database.Entity.MyAims
+import com.example.portfolia.database.Entity.Writing
 import kotlinx.android.synthetic.main.item_aims.view.*
 
-class AimsAdapter(var context: Context,var list: List<MyAims>):
+class AimsAdapter(var context: Context,var list: List<MyAims>,var clicklidtrnrt:OnItemClickListener):
     RecyclerView.Adapter<AimsAdapter.AimsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AimsViewHolder {
@@ -24,6 +25,7 @@ class AimsAdapter(var context: Context,var list: List<MyAims>):
         holder.aims_exact_thing.text=context.getString(R.string.exact_thing)+"\n"+aims.exact_thing
         holder.aims_cef_level.text=context.getString(R.string.cef_level)+"\n"+aims.cef_level
         holder.aims_purpose_language.text=context.getString(R.string.purpose_language)+"\n"+aims.purpose_language
+        holder.initialize(aims,clicklidtrnrt)
     }
 
     override fun getItemCount(): Int {return list.size}
@@ -34,6 +36,15 @@ class AimsAdapter(var context: Context,var list: List<MyAims>):
         val aims_exact_thing=itemview.aims_exact_thing
         val aims_cef_level=itemview.aims_cef_level
         val aims_purpose_language=itemview.aims_purpose_language
+
+        fun initialize(item:MyAims,action:OnItemClickListener){
+            itemView.setOnClickListener {
+                action.onItemClick(item,adapterPosition)
+            }
+        }
     }
 
+    interface OnItemClickListener{
+        fun onItemClick(item: MyAims, position: Int)
+    }
 }

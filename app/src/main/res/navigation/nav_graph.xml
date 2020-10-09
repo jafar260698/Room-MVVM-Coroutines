@@ -114,19 +114,37 @@
             app:enterAnim="@anim/bottom_animation"
             app:exitAnim="@anim/slide_out_right"
             app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:popExitAnim="@anim/slide_out_right"
+            />
         <action
             android:id="@+id/action_homeFragment_to_selfAssessmentFragment"
-            app:destination="@id/selfAssessmentFragment" />
+            app:destination="@id/selfAssessmentFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment_to_languageBackFragment2"
-            app:destination="@id/languageBackFragment2" />
+            app:destination="@id/languageBackFragment2"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment_to_linguisticFragment"
-            app:destination="@id/linguisticFragment" />
+            app:destination="@id/linguisticFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
         <action
             android:id="@+id/action_homeFragment_to_languageAchieveFragment"
-            app:destination="@id/languageAchieveFragment" />
+            app:destination="@id/languageAchieveFragment"
+            app:enterAnim="@anim/bottom_animation"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
     </fragment>
     <fragment
         android:id="@+id/writingFragment"
@@ -213,6 +231,10 @@
         android:name="com.example.portfolia.ui.languageBiography.LearningAimsFragment"
         android:label="fragment_learning_aims"
         tools:layout="@layout/fragment_learning_aims" >
+
+        <argument android:name="idsi"
+
+            android:defaultValue="1"/>
         <action
             android:id="@+id/action_learningAimsFragment_to_learningAimsAddFragment"
             app:destination="@id/learningAimsAddFragment"

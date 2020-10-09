@@ -63,6 +63,14 @@ Electronic Version 1.0.0"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eng"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/ten"
+            />
         <TextView
             android:text=" The European Language Portfolio (ELP) is a document in which you can record and
 reflect on your language learning and intercultural experiences, whether gained at school or outside school.  It contains three parts:
@@ -82,6 +90,64 @@ Author: Khikmatullo Urazbaev, Westminster International University in Tashkent (
             android:textColor="@color/colorPrimary"
             android:layout_margin="@dimen/fiveteen"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Yevropa til portfoliosi O`zbek modeli
+Ingliz tili o`qituvchilari tayyorlash kursi talabalari uchun
+Elektron Versiya 1.0.0"
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/fiveteen"
+            android:layout_marginEnd="@dimen/fiveteen"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/uzb"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/ten"
+            />
+        <TextView
+            android:text="Yevropa til portfoliosi (YeTP) ta’lim muassasasi yoki undan tashqarida o’rganilgan tillaringiz haqida mulohaza qilishingiz, ushbu tillarni o`rganish jarayoningiz va madaniyatlararo muloqotlaringizni qayd qilib borish imloniyatini beruvchi hujjat hisoblanadi.  U uch qismdan iborat, ular:
+Til pasporti – ma’lum bir vaqtda turli xil tillar bo`yicha darajangizni aniqlash imknoni beradi.
+Til biografiyasi – sizga til o’rganish jarayoningiz va yutuqlaringizni baholash, ular haqida mulohaza qilish imkonini beradi.
+Shaxsiy ishlar (Dosye) – sizning til passportingiz va til biografiyangizda qayd qilgan yutuqlaringiz yoki tajribalaringizni hujjatlashtirish uchun kerakli materiallarni saralash va saqlash imkonini beradi.
+YeTP sizning shaxsiy hujjatingizdir. Uning maqsadlari:
+Sizga ona tilingizdan boshqa tillarni o`rganish va ulardan foydalanish tajribangizga shakl va uzviylik berish;
+Sizning til malakalaringizni rivojlantirish va rangbaranglashtirish orqali tillarni yanada mukammalroq o`rganishga ruhlantirish;
+Siz o`zlashtirgan lisoniy va madaniyatlararo malakalaringizni qayd qilish imkonini berish (masalan ta’limning yuqori bosqichida, vataningiz yoki xorijda ishga joylashishda malakalaringizni tasdiqlovchi hujjat sifatida taqdim etish uchun).
+YeTP xorijiy tillarni egallashning Umumyevropa kompetensiyalariga (CEFR) bog`langan bo`lib Yevropa Kengashining zamonaviy tillar bo`yicha a’zo mamlakatlar Ministrlar Qo`mitasi tomonidan tasdiqlangan Tamoyillar va Yo`riqnomalar umumiy majmuiga mosdir (Tavsiyalar to`plami N° R (98) 6).
+Ushbu elektron portfolio (e-portfolio) Yevropa til portfoliosi O`zbek modeli (Mualliflik guvohnoma raqami 001657) asosida yaratilgan. "
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorPrimary"
+            android:layout_margin="@dimen/fiveteen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+
+            android:textSize="@dimen/twentysp"
+            android:fontFamily="@font/artifika"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="Muallif: Urazbayev Hikmatullo, Toshkentdagi xalqaro Vestminster universiteti (TXVU)\n
+   G.H. Bakiyeva, Ozbekiston Davlat Jahon tillari universiteti (OzDJTU)"
+            android:layout_marginStart="@dimen/ten"
+            android:layout_marginEnd="@dimen/ten"
+            android:layout_marginTop="@dimen/thirty"
+            android:layout_marginBottom="@dimen/twenty"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>

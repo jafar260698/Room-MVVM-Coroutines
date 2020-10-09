@@ -1,211 +1,573 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.languagePassport.SelfAssessmentFragment">
-    <RelativeLayout
-        android:id="@+id/relative_writing"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:elevation="2dp"
-        android:background="?android:attr/windowBackground"
-        android:layout_marginBottom="@dimen/fiveteen"
-        android:padding="@dimen/five">
-        <ImageView
-            android:id="@+id/back_self_assessment"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:src="@drawable/ic_arrow"
-            android:layout_centerVertical="true"
-            android:adjustViewBounds="true"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:layout_marginStart="@dimen/five"
-            android:focusable="true"/>
-        <TextView
-            android:id="@+id/logo_app"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/self_assessment"
-            android:textSize="@dimen/twentysp"
-            android:textStyle="bold"
-            android:fontFamily="@font/roboto"/>
-    </RelativeLayout>
-    <TableLayout
-        android:id="@+id/table_listening"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="0dp"
-        android:layout_marginHorizontal="10dp"
-        android:background="@color/lightwhite"
-        android:elevation="1dp">
-        <TableRow
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relative_writing"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/border">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/language_exact"
-                android:textStyle="bold"
-                android:layout_weight="1"
-                android:padding="@dimen/five"
-                android:gravity="center"/>
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A1"
-                android:background="#f1f1f1"
-                android:textStyle="bold"
-                android:layout_weight="1"
-               />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A2"
-                android:background="#f1f1f1"
-                android:textStyle="bold"
-                android:layout_weight="1"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="B1"
-                android:background="#f1f1f1"
-                android:textStyle="bold"
-                android:layout_weight="1.5"
-                />
-                <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="B2"
-                android:background="#f1f1f1"
-                android:textStyle="bold"
-                android:layout_weight="1"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C1"
-                android:background="#f1f1f1"
-                android:textStyle="bold"
-                android:layout_weight="1"
-                />
-        </TableRow>
-
-        <TableRow>
+            android:layout_height="58dp"
+            android:elevation="2dp"
+            android:background="?android:attr/windowBackground"
+            android:layout_marginBottom="@dimen/fiveteen"
+            android:padding="@dimen/five">
             <ImageView
+                android:id="@+id/back_self_assessment"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/ic_arrow"
+                android:layout_centerVertical="true"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:layout_marginStart="@dimen/five"
+                android:focusable="true"/>
+            <TextView
+                android:id="@+id/logo_app"
                 android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:text="A1"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/self_assessment"
+                android:textSize="@dimen/twentysp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"/>
+        </RelativeLayout>
+        <LinearLayout
+        android:id="@+id/linear_radiobutton"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_listening"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="@dimen/ten"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        android:padding="@dimen/ten"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/item_mylanguage_image1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
                 android:src="@drawable/listening"
                 android:scaleType="centerCrop"
-                android:layout_weight="1"
-                android:layout_marginBottom="1dp"
-                android:layout_marginHorizontal="1dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="I can recognise familiar words and very basic phrases concerning myself, my family and immediate concrete surroundings when people speak slowly and clearly. "
-                android:layout_weight="1"
-                android:gravity="center"
-                android:background="#ffffff"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="A2"
-                android:layout_weight="0.0"
-                android:layout_gravity="center"
-                android:layout_marginBottom="1dp"
-                android:layout_marginHorizontal="1dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I  can  understand  what  people  say  to me  in  simple  everyday  conversation  when  they  speak
-slowly and clearly"
-                android:layout_weight="0.75"
-                android:gravity="center"
-                android:background="#ffffff"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="B1"
-                android:layout_weight="0.0"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginBottom="1dp"
-                android:layout_marginHorizontal="1dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I can follow the gist of everyday conversation when people speak clearly to me in standard
-dialect"
-                android:layout_weight="0.75"
-                android:gravity="center"
-                android:background="#ffffff"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="B2"
-                android:layout_weight="0.0"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginBottom="1dp"
-                android:layout_marginHorizontal="1dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I can understand standard spoken language on both familiar and unfamiliar topics in
-everyday situations even in a noisy environment"
-                android:layout_weight="0.75"
-                android:gravity="center"
-                android:background="#ffffff"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C1"
-                android:layout_weight="0.0"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:layout_marginBottom="1dp"
-                android:layout_marginHorizontal="1dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="I  can  follow  extended  speech  even  when  it  is  not  clearly  structured  and  when
-relationships are only implied and not signalled explicitly
-"
-                android:layout_weight="0.75"
-                android:gravity="center"
-                android:background="#ffffff"
-                android:layout_marginRight="1dp"
-                android:layout_marginBottom="1dp"/>
-        </TableRow>
+                />
 
-    </TableLayout>
-</LinearLayout>
+            <TextView
+                android:id="@+id/itemfood_name1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="@dimen/ten"
+                android:text="Listening"
+                android:layout_toEndOf="@+id/item_mylanguage_image1"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ten"
+                android:textColor="@color/blue"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+        <RadioGroup
+            android:id="@+id/radioGroup_listening"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/listening_a1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A1" />
+            <RadioButton
+                android:id="@+id/listening_a2"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A2" />
+            <RadioButton
+                android:id="@+id/listening_b1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B1" />
+            <RadioButton
+                android:id="@+id/listening_b2"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B2" />
+            <RadioButton
+                android:id="@+id/listening_c1"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1" />
+        </RadioGroup>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_reading"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/ten"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:padding="@dimen/ten"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/item_mylanguage_image2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/reading"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/itemfood_name2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="Reading"
+                    android:layout_toEndOf="@+id/item_mylanguage_image2"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten"
+                    android:textColor="@color/blue"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RadioGroup
+            android:id="@+id/radioGroup_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/reading_a1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A1" />
+            <RadioButton
+                android:id="@+id/reading_a2"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A2" />
+            <RadioButton
+
+                android:id="@+id/reading_b1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B1" />
+            <RadioButton
+
+                android:id="@+id/reading_b2"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B2" />
+            <RadioButton
+                android:id="@+id/reading_c1"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1" />
+        </RadioGroup>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_spoken_interaction"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="@dimen/ten"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:padding="@dimen/ten"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_mylanguage_image3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/spoken"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:id="@+id/itemfood_name3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="Spoken Interaction"
+                    android:layout_toEndOf="@+id/item_mylanguage_image3"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten"
+                    android:textColor="@color/blue"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RadioGroup
+            android:id="@+id/radioGroup_spoken_interaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/spoken_interaction_a1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A1" />
+            <RadioButton
+                android:id="@+id/spoken_interaction_a2"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A2" />
+            <RadioButton
+                android:id="@+id/spoken_interaction_b1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B1" />
+            <RadioButton
+                android:id="@+id/spoken_interaction_b2"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B2" />
+            <RadioButton
+                android:id="@+id/spoken_interaction_c1"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1" />
+        </RadioGroup>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_spoken_production"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/ten"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:padding="@dimen/ten"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/item_mylanguage_image4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/spk"
+                    android:scaleType="centerCrop"/>
+                <TextView
+                    android:id="@+id/itemfood_name4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="Spoken Production"
+                    android:layout_toEndOf="@+id/item_mylanguage_image4"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten"
+                    android:textColor="@color/blue"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RadioGroup
+            android:id="@+id/radioGroup_spoken_production"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/spoken_production_a1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="A1" />
+            <RadioButton
+                android:id="@+id/spoken_production_a2"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A2" />
+            <RadioButton
+                android:id="@+id/spoken_production_b1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B1" />
+            <RadioButton
+                android:id="@+id/spoken_production_b2"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B2" />
+            <RadioButton
+                android:id="@+id/spoken_production_c1"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1" />
+        </RadioGroup>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_writing"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/ten"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            android:padding="@dimen/ten"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_mylanguage_image5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/writing"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/itemfood_name5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:layout_marginTop="@dimen/ten"
+                    android:text="Writing"
+                    android:layout_toEndOf="@+id/item_mylanguage_image5"
+                    android:fontFamily="@font/roboto"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ten"
+                    android:textColor="@color/blue"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RadioGroup
+            android:id="@+id/radioGroup_writing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RadioButton
+                android:id="@+id/writing_a1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:text="A1" />
+            <RadioButton
+                android:id="@+id/writing_a2"
+                android:layout_margin="@dimen/five"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A2" />
+            <RadioButton
+                android:id="@+id/writing_b1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="B1" />
+            <RadioButton
+                android:id="@+id/writing_b2"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B2" />
+            <RadioButton
+                android:id="@+id/writing_c1"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C1"/>
+        </RadioGroup>
+        <Button
+            android:id="@+id/save_self_assesment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/button_design3"
+            android:padding="@dimen/ten"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginStart="@dimen/fiveteen"
+            android:layout_marginEnd="@dimen/fiveteen"
+            android:layout_marginBottom="@dimen/twenty"
+            android:text="Save"
+            android:textSize="@dimen/twentysp"/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_myscore"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/fiveteen"
+                app:cardCornerRadius="@dimen/ten"
+                android:background="@color/lightwhite"
+                android:layout_margin="@dimen/ten">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="My score:"
+                        android:fontFamily="@font/roboto"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/twentysp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/listening_self"
+                        android:text="Listening"
+                        android:fontFamily="sans-serif"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/eighteensp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="normal"
+                        android:layout_below="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/reading_self"
+                        android:text="Reading"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/sixteensp"
+                        android:layout_marginTop="@dimen/ten"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_below="@+id/org_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/spoken_interaction_self"
+                        android:text="Spoken Interaction:"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/sixteensp"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/spoken_production_self"
+                        android:text="Spoken Production:"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/sixteensp"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/writing_self"
+                        android:text="Writing: A3"
+                        android:textColorHint="@color/colorPrimary"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/sixteensp"
+                        android:layout_marginBottom="@dimen/ten"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textStyle="normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
