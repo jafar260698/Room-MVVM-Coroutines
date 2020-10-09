@@ -19,4 +19,7 @@
     <string name="file_must_not_be_loaded">Field must not be empty</string>
     <string name="language">Language:</string>
     <string name="save">Saqlash</string>
+    <string name="ochirildi">Deleted</string>
+    <string name="self_assessment">Self-Assessment</string>
+    <string name="language_exact">Language</string>
 </resources>
